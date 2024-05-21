@@ -1,0 +1,27 @@
+{
+  "name": "jsonplaceholder-test-e2e-bdd",
+  "version": "1.0.0",
+  "description": "Automação com Cypress e BDD - jsonplaceholder",
+  "main": "index.js",
+  "scripts": {
+    "test:chrome": "cypress run --browser chrome --no-exit",
+    "test:report": "npx cypress run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.5",
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "cypress": "^13.9.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "stepDefinitions": "cypress/e2e/cucumber/Tests"
+  }
+}
